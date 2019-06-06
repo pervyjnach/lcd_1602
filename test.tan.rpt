@@ -1,0 +1,385 @@
+Classic Timing Analyzer report for test
+Thu Jun 06 17:26:50 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'master_clk'
+  6. tco
+  7. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                   ;
++------------------------------+-------+---------------+----------------------------------+--------------------------+-----------------------------+------------+------------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                     ; To                          ; From Clock ; To Clock   ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------------+-----------------------------+------------+------------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 14.694 ns                        ; init:initializator|ready ; enable                      ; master_clk ; --         ; 0            ;
+; Clock Setup: 'master_clk'    ; N/A   ; None          ; 140.47 MHz ( period = 7.119 ns ) ; init:initializator|ready ; write:wrt|inner_delitel[14] ; master_clk ; master_clk ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                          ;                             ;            ;            ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------------+-----------------------------+------------+------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C5T144C8        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; master_clk      ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'master_clk'                                                                                                                                                                                                                                                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                             ; To                               ; From Clock ; To Clock   ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 140.47 MHz ( period = 7.119 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[11]      ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[10]      ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[9]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[8]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[7]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[6]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[5]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[4]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[3]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[2]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[1]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 142.31 MHz ( period = 7.027 ns )                    ; init:initializator|ready         ; write:wrt|inner_delitel[0]       ; master_clk ; master_clk ; None                        ; None                      ; 2.487 ns                ;
+; N/A                                     ; 155.04 MHz ( period = 6.450 ns )                    ; init:initializator|counter_2[0]  ; init:initializator|ready         ; master_clk ; master_clk ; None                        ; None                      ; 6.178 ns                ;
+; N/A                                     ; 155.04 MHz ( period = 6.450 ns )                    ; init:initializator|counter_2[0]  ; init:initializator|en            ; master_clk ; master_clk ; None                        ; None                      ; 6.178 ns                ;
+; N/A                                     ; 155.69 MHz ( period = 6.423 ns )                    ; init:initializator|counter_1[0]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 3.124 ns                ;
+; N/A                                     ; 156.52 MHz ( period = 6.389 ns )                    ; init:initializator|counter_2[2]  ; init:initializator|ready         ; master_clk ; master_clk ; None                        ; None                      ; 6.117 ns                ;
+; N/A                                     ; 156.52 MHz ( period = 6.389 ns )                    ; init:initializator|counter_2[2]  ; init:initializator|en            ; master_clk ; master_clk ; None                        ; None                      ; 6.117 ns                ;
+; N/A                                     ; 159.41 MHz ( period = 6.273 ns )                    ; init:initializator|counter_2[1]  ; init:initializator|ready         ; master_clk ; master_clk ; None                        ; None                      ; 6.001 ns                ;
+; N/A                                     ; 159.41 MHz ( period = 6.273 ns )                    ; init:initializator|counter_2[1]  ; init:initializator|en            ; master_clk ; master_clk ; None                        ; None                      ; 6.001 ns                ;
+; N/A                                     ; 164.37 MHz ( period = 6.084 ns )                    ; init:initializator|counter_1[1]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.785 ns                ;
+; N/A                                     ; 165.34 MHz ( period = 6.048 ns )                    ; init:initializator|counter_1[2]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.749 ns                ;
+; N/A                                     ; 168.27 MHz ( period = 5.943 ns )                    ; init:initializator|counter_2[3]  ; init:initializator|ready         ; master_clk ; master_clk ; None                        ; None                      ; 5.671 ns                ;
+; N/A                                     ; 168.27 MHz ( period = 5.943 ns )                    ; init:initializator|counter_2[3]  ; init:initializator|en            ; master_clk ; master_clk ; None                        ; None                      ; 5.671 ns                ;
+; N/A                                     ; 169.12 MHz ( period = 5.913 ns )                    ; init:initializator|counter_1[3]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.614 ns                ;
+; N/A                                     ; 170.15 MHz ( period = 5.877 ns )                    ; init:initializator|counter_1[4]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 172.68 MHz ( period = 5.791 ns )                    ; init:initializator|counter_1[5]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.492 ns                ;
+; N/A                                     ; 176.65 MHz ( period = 5.661 ns )                    ; init:initializator|counter_1[6]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.362 ns                ;
+; N/A                                     ; 181.52 MHz ( period = 5.509 ns )                    ; init:initializator|counter_1[7]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.210 ns                ;
+; N/A                                     ; 184.88 MHz ( period = 5.409 ns )                    ; init:initializator|counter_1[11] ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.110 ns                ;
+; N/A                                     ; 186.08 MHz ( period = 5.374 ns )                    ; init:initializator|counter_1[8]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.075 ns                ;
+; N/A                                     ; 187.34 MHz ( period = 5.338 ns )                    ; init:initializator|counter_1[9]  ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 2.039 ns                ;
+; N/A                                     ; 192.23 MHz ( period = 5.202 ns )                    ; init:initializator|counter_1[10] ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 1.903 ns                ;
+; N/A                                     ; 198.61 MHz ( period = 5.035 ns )                    ; init:initializator|counter_1[12] ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 1.736 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; init:initializator|counter_1[13] ; init:initializator|counter_1[14] ; master_clk ; master_clk ; None                        ; None                      ; 1.650 ns                ;
+; N/A                                     ; 226.24 MHz ( period = 4.420 ns )                    ; init:initializator|counter_2[1]  ; init:initializator|data[0]       ; master_clk ; master_clk ; None                        ; None                      ; 4.173 ns                ;
+; N/A                                     ; 226.24 MHz ( period = 4.420 ns )                    ; init:initializator|counter_2[1]  ; init:initializator|data[1]       ; master_clk ; master_clk ; None                        ; None                      ; 4.173 ns                ;
+; N/A                                     ; 226.24 MHz ( period = 4.420 ns )                    ; init:initializator|counter_2[1]  ; init:initializator|data[2]       ; master_clk ; master_clk ; None                        ; None                      ; 4.173 ns                ;
+; N/A                                     ; 226.24 MHz ( period = 4.420 ns )                    ; init:initializator|counter_2[1]  ; init:initializator|data[3]       ; master_clk ; master_clk ; None                        ; None                      ; 4.173 ns                ;
+; N/A                                     ; 226.24 MHz ( period = 4.420 ns )                    ; init:initializator|counter_2[1]  ; init:initializator|data[4]       ; master_clk ; master_clk ; None                        ; None                      ; 4.173 ns                ;
+; N/A                                     ; 241.95 MHz ( period = 4.133 ns )                    ; init:initializator|counter_2[3]  ; init:initializator|data[0]       ; master_clk ; master_clk ; None                        ; None                      ; 3.886 ns                ;
+; N/A                                     ; 241.95 MHz ( period = 4.133 ns )                    ; init:initializator|counter_2[3]  ; init:initializator|data[1]       ; master_clk ; master_clk ; None                        ; None                      ; 3.886 ns                ;
+; N/A                                     ; 241.95 MHz ( period = 4.133 ns )                    ; init:initializator|counter_2[3]  ; init:initializator|data[2]       ; master_clk ; master_clk ; None                        ; None                      ; 3.886 ns                ;
+; N/A                                     ; 241.95 MHz ( period = 4.133 ns )                    ; init:initializator|counter_2[3]  ; init:initializator|data[3]       ; master_clk ; master_clk ; None                        ; None                      ; 3.886 ns                ;
+; N/A                                     ; 241.95 MHz ( period = 4.133 ns )                    ; init:initializator|counter_2[3]  ; init:initializator|data[4]       ; master_clk ; master_clk ; None                        ; None                      ; 3.886 ns                ;
+; N/A                                     ; 248.69 MHz ( period = 4.021 ns )                    ; init:initializator|counter_2[2]  ; init:initializator|data[0]       ; master_clk ; master_clk ; None                        ; None                      ; 3.774 ns                ;
+; N/A                                     ; 248.69 MHz ( period = 4.021 ns )                    ; init:initializator|counter_2[2]  ; init:initializator|data[1]       ; master_clk ; master_clk ; None                        ; None                      ; 3.774 ns                ;
+; N/A                                     ; 248.69 MHz ( period = 4.021 ns )                    ; init:initializator|counter_2[2]  ; init:initializator|data[2]       ; master_clk ; master_clk ; None                        ; None                      ; 3.774 ns                ;
+; N/A                                     ; 248.69 MHz ( period = 4.021 ns )                    ; init:initializator|counter_2[2]  ; init:initializator|data[3]       ; master_clk ; master_clk ; None                        ; None                      ; 3.774 ns                ;
+; N/A                                     ; 248.69 MHz ( period = 4.021 ns )                    ; init:initializator|counter_2[2]  ; init:initializator|data[4]       ; master_clk ; master_clk ; None                        ; None                      ; 3.774 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; init:initializator|ready         ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; init:initializator|ready         ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; init:initializator|ready         ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; init:initializator|ready         ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; init:initializator|ready         ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; init:initializator|ready         ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 256.08 MHz ( period = 3.905 ns )                    ; init:initializator|ready         ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 256.21 MHz ( period = 3.903 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|data[4]                ; master_clk ; master_clk ; None                        ; None                      ; 3.637 ns                ;
+; N/A                                     ; 261.44 MHz ( period = 3.825 ns )                    ; init:initializator|counter_2[0]  ; init:initializator|data[0]       ; master_clk ; master_clk ; None                        ; None                      ; 3.578 ns                ;
+; N/A                                     ; 261.44 MHz ( period = 3.825 ns )                    ; init:initializator|counter_2[0]  ; init:initializator|data[1]       ; master_clk ; master_clk ; None                        ; None                      ; 3.578 ns                ;
+; N/A                                     ; 261.44 MHz ( period = 3.825 ns )                    ; init:initializator|counter_2[0]  ; init:initializator|data[2]       ; master_clk ; master_clk ; None                        ; None                      ; 3.578 ns                ;
+; N/A                                     ; 261.44 MHz ( period = 3.825 ns )                    ; init:initializator|counter_2[0]  ; init:initializator|data[3]       ; master_clk ; master_clk ; None                        ; None                      ; 3.578 ns                ;
+; N/A                                     ; 261.44 MHz ( period = 3.825 ns )                    ; init:initializator|counter_2[0]  ; init:initializator|data[4]       ; master_clk ; master_clk ; None                        ; None                      ; 3.578 ns                ;
+; N/A                                     ; 270.20 MHz ( period = 3.701 ns )                    ; write:wrt|inner_counter[1]       ; write:wrt|data[4]                ; master_clk ; master_clk ; None                        ; None                      ; 3.435 ns                ;
+; N/A                                     ; 282.89 MHz ( period = 3.535 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|data[4]                ; master_clk ; master_clk ; None                        ; None                      ; 3.269 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; write:wrt|inner_counter[3]       ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; write:wrt|inner_counter[4]       ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 3.076 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; write:wrt|inner_counter[4]       ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 3.076 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; write:wrt|inner_counter[4]       ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 3.076 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; write:wrt|inner_counter[4]       ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 3.076 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; write:wrt|inner_counter[4]       ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 3.076 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; write:wrt|inner_counter[4]       ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 3.076 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; write:wrt|inner_counter[4]       ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 3.076 ns                ;
+; N/A                                     ; 302.85 MHz ( period = 3.302 ns )                    ; init:initializator|counter_1[0]  ; init:initializator|counter_1[13] ; master_clk ; master_clk ; None                        ; None                      ; 3.038 ns                ;
+; N/A                                     ; 310.85 MHz ( period = 3.217 ns )                    ; write:wrt|inner_delitel[0]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.861 ns                ;
+; N/A                                     ; 310.95 MHz ( period = 3.216 ns )                    ; init:initializator|counter_1[0]  ; init:initializator|counter_1[12] ; master_clk ; master_clk ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 2.920 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 2.920 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 2.920 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 2.920 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 2.920 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 2.920 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; write:wrt|inner_counter[2]       ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 2.920 ns                ;
+; N/A                                     ; 318.47 MHz ( period = 3.140 ns )                    ; write:wrt|inner_delitel[1]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.784 ns                ;
+; N/A                                     ; 319.49 MHz ( period = 3.130 ns )                    ; init:initializator|counter_1[0]  ; init:initializator|counter_1[11] ; master_clk ; master_clk ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; write:wrt|inner_counter[5]       ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 2.817 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; write:wrt|inner_counter[5]       ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 2.817 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; write:wrt|inner_counter[5]       ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 2.817 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; write:wrt|inner_counter[5]       ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 2.817 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; write:wrt|inner_counter[5]       ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 2.817 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; write:wrt|inner_counter[5]       ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 2.817 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; write:wrt|inner_counter[5]       ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 2.817 ns                ;
+; N/A                                     ; 327.33 MHz ( period = 3.055 ns )                    ; write:wrt|inner_delitel[2]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.699 ns                ;
+; N/A                                     ; 328.52 MHz ( period = 3.044 ns )                    ; init:initializator|counter_1[0]  ; init:initializator|counter_1[10] ; master_clk ; master_clk ; None                        ; None                      ; 2.780 ns                ;
+; N/A                                     ; 329.06 MHz ( period = 3.039 ns )                    ; write:wrt|inner_delitel[0]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.775 ns                ;
+; N/A                                     ; 331.24 MHz ( period = 3.019 ns )                    ; write:wrt|inner_delitel[3]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.663 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; init:initializator|counter_1[1]  ; init:initializator|counter_1[13] ; master_clk ; master_clk ; None                        ; None                      ; 2.699 ns                ;
+; N/A                                     ; 337.61 MHz ( period = 2.962 ns )                    ; write:wrt|inner_delitel[1]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.698 ns                ;
+; N/A                                     ; 338.07 MHz ( period = 2.958 ns )                    ; init:initializator|counter_1[0]  ; init:initializator|counter_1[9]  ; master_clk ; master_clk ; None                        ; None                      ; 2.694 ns                ;
+; N/A                                     ; 338.64 MHz ( period = 2.953 ns )                    ; write:wrt|inner_delitel[0]       ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.689 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[2]  ; init:initializator|counter_1[13] ; master_clk ; master_clk ; None                        ; None                      ; 2.663 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[4]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.528 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[6]       ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 2.615 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[6]       ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 2.615 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[6]       ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 2.615 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[6]       ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 2.615 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[6]       ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 2.615 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[6]       ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 2.615 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[6]       ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 2.615 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[2]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.613 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[1]  ; init:initializator|counter_1[12] ; master_clk ; master_clk ; None                        ; None                      ; 2.613 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[1]       ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.612 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[0]  ; init:initializator|counter_1[8]  ; master_clk ; master_clk ; None                        ; None                      ; 2.608 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[4]       ; write:wrt|data[4]                ; master_clk ; master_clk ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[0]       ; write:wrt|inner_delitel[11]      ; master_clk ; master_clk ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[1]       ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 2.600 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[1]       ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 2.600 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[1]       ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 2.600 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[1]       ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 2.600 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[1]       ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 2.600 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[1]       ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 2.600 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[1]       ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 2.600 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[5]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.492 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[3]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.577 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[2]  ; init:initializator|counter_1[12] ; master_clk ; master_clk ; None                        ; None                      ; 2.577 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[3]  ; init:initializator|counter_1[13] ; master_clk ; master_clk ; None                        ; None                      ; 2.528 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[2]       ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.527 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[1]  ; init:initializator|counter_1[11] ; master_clk ; master_clk ; None                        ; None                      ; 2.527 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[1]       ; write:wrt|inner_delitel[11]      ; master_clk ; master_clk ; None                        ; None                      ; 2.526 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[0]  ; init:initializator|counter_1[7]  ; master_clk ; master_clk ; None                        ; None                      ; 2.522 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[0]       ; write:wrt|inner_delitel[10]      ; master_clk ; master_clk ; None                        ; None                      ; 2.517 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[6]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.406 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[4]  ; init:initializator|counter_1[13] ; master_clk ; master_clk ; None                        ; None                      ; 2.492 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[3]       ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.491 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[2]  ; init:initializator|counter_1[11] ; master_clk ; master_clk ; None                        ; None                      ; 2.491 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|inner_counter[1]       ; master_clk ; master_clk ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|inner_counter[0]       ; master_clk ; master_clk ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|inner_counter[4]       ; master_clk ; master_clk ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|inner_counter[5]       ; master_clk ; master_clk ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|inner_counter[6]       ; master_clk ; master_clk ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|inner_counter[2]       ; master_clk ; master_clk ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|inner_counter[3]       ; master_clk ; master_clk ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[4]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.442 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[3]  ; init:initializator|counter_1[12] ; master_clk ; master_clk ; None                        ; None                      ; 2.442 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[2]       ; write:wrt|inner_delitel[11]      ; master_clk ; master_clk ; None                        ; None                      ; 2.441 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[1]  ; init:initializator|counter_1[10] ; master_clk ; master_clk ; None                        ; None                      ; 2.441 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[1]       ; write:wrt|inner_delitel[10]      ; master_clk ; master_clk ; None                        ; None                      ; 2.440 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[0]       ; write:wrt|inner_delitel[9]       ; master_clk ; master_clk ; None                        ; None                      ; 2.431 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[5]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.406 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[5]  ; init:initializator|counter_1[13] ; master_clk ; master_clk ; None                        ; None                      ; 2.406 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[4]  ; init:initializator|counter_1[12] ; master_clk ; master_clk ; None                        ; None                      ; 2.406 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[3]       ; write:wrt|inner_delitel[11]      ; master_clk ; master_clk ; None                        ; None                      ; 2.405 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[2]  ; init:initializator|counter_1[10] ; master_clk ; master_clk ; None                        ; None                      ; 2.405 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[7]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.276 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[5]       ; write:wrt|data[4]                ; master_clk ; master_clk ; None                        ; None                      ; 2.357 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[4]       ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.356 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[3]  ; init:initializator|counter_1[11] ; master_clk ; master_clk ; None                        ; None                      ; 2.356 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[2]       ; write:wrt|inner_delitel[10]      ; master_clk ; master_clk ; None                        ; None                      ; 2.355 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[1]  ; init:initializator|counter_1[9]  ; master_clk ; master_clk ; None                        ; None                      ; 2.355 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[1]       ; write:wrt|inner_delitel[9]       ; master_clk ; master_clk ; None                        ; None                      ; 2.354 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[0]       ; write:wrt|inner_delitel[8]       ; master_clk ; master_clk ; None                        ; None                      ; 2.345 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[0]  ; init:initializator|counter_1[6]  ; master_clk ; master_clk ; None                        ; None                      ; 2.332 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[6]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.320 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[5]       ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.320 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[5]  ; init:initializator|counter_1[12] ; master_clk ; master_clk ; None                        ; None                      ; 2.320 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[4]  ; init:initializator|counter_1[11] ; master_clk ; master_clk ; None                        ; None                      ; 2.320 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[3]       ; write:wrt|inner_delitel[10]      ; master_clk ; master_clk ; None                        ; None                      ; 2.319 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[2]  ; init:initializator|counter_1[9]  ; master_clk ; master_clk ; None                        ; None                      ; 2.319 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[6]  ; init:initializator|counter_1[13] ; master_clk ; master_clk ; None                        ; None                      ; 2.276 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[4]       ; write:wrt|inner_delitel[11]      ; master_clk ; master_clk ; None                        ; None                      ; 2.270 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[3]  ; init:initializator|counter_1[10] ; master_clk ; master_clk ; None                        ; None                      ; 2.270 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[2]       ; write:wrt|inner_delitel[9]       ; master_clk ; master_clk ; None                        ; None                      ; 2.269 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[1]  ; init:initializator|counter_1[8]  ; master_clk ; master_clk ; None                        ; None                      ; 2.269 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[1]       ; write:wrt|inner_delitel[8]       ; master_clk ; master_clk ; None                        ; None                      ; 2.268 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[0]  ; init:initializator|counter_1[5]  ; master_clk ; master_clk ; None                        ; None                      ; 2.246 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[3]       ; write:wrt|data[9]                ; master_clk ; master_clk ; None                        ; None                      ; 2.245 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[6]       ; write:wrt|inner_delitel[12]      ; master_clk ; master_clk ; None                        ; None                      ; 2.234 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[5]       ; write:wrt|inner_delitel[11]      ; master_clk ; master_clk ; None                        ; None                      ; 2.234 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[5]  ; init:initializator|counter_1[11] ; master_clk ; master_clk ; None                        ; None                      ; 2.234 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[4]  ; init:initializator|counter_1[10] ; master_clk ; master_clk ; None                        ; None                      ; 2.234 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[3]       ; write:wrt|inner_delitel[9]       ; master_clk ; master_clk ; None                        ; None                      ; 2.233 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[2]  ; init:initializator|counter_1[8]  ; master_clk ; master_clk ; None                        ; None                      ; 2.233 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[8]       ; write:wrt|inner_delitel[14]      ; master_clk ; master_clk ; None                        ; None                      ; 2.129 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[3]       ; write:wrt|data[6]                ; master_clk ; master_clk ; None                        ; None                      ; 2.199 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[0]       ; write:wrt|data[4]                ; master_clk ; master_clk ; None                        ; None                      ; 2.193 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_counter[2]       ; write:wrt|data[7]                ; master_clk ; master_clk ; None                        ; None                      ; 2.193 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[7]       ; write:wrt|inner_delitel[13]      ; master_clk ; master_clk ; None                        ; None                      ; 2.190 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[6]  ; init:initializator|counter_1[12] ; master_clk ; master_clk ; None                        ; None                      ; 2.190 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[4]       ; write:wrt|inner_delitel[10]      ; master_clk ; master_clk ; None                        ; None                      ; 2.184 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[3]  ; init:initializator|counter_1[9]  ; master_clk ; master_clk ; None                        ; None                      ; 2.184 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; write:wrt|inner_delitel[2]       ; write:wrt|inner_delitel[8]       ; master_clk ; master_clk ; None                        ; None                      ; 2.183 ns                ;
+; N/A                                     ; Restricted to 340.02 MHz ( period = 2.941 ns )      ; init:initializator|counter_1[1]  ; init:initializator|counter_1[7]  ; master_clk ; master_clk ; None                        ; None                      ; 2.183 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                  ;                                  ;            ;            ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; tco                                                                                                ;
++-------+--------------+------------+----------------------------------+----------------+------------+
+; Slack ; Required tco ; Actual tco ; From                             ; To             ; From Clock ;
++-------+--------------+------------+----------------------------------+----------------+------------+
+; N/A   ; None         ; 14.694 ns  ; init:initializator|ready         ; enable         ; master_clk ;
+; N/A   ; None         ; 14.491 ns  ; init:initializator|ready         ; enable_control ; master_clk ;
+; N/A   ; None         ; 13.611 ns  ; write:wrt|data[9]                ; data[9]        ; master_clk ;
+; N/A   ; None         ; 12.988 ns  ; init:initializator|data[0]       ; data[0]        ; master_clk ;
+; N/A   ; None         ; 12.957 ns  ; init:initializator|ready         ; ready_out      ; master_clk ;
+; N/A   ; None         ; 12.889 ns  ; init:initializator|data[4]       ; data[4]        ; master_clk ;
+; N/A   ; None         ; 12.610 ns  ; init:initializator|data[1]       ; data[1]        ; master_clk ;
+; N/A   ; None         ; 12.400 ns  ; init:initializator|data[2]       ; data[2]        ; master_clk ;
+; N/A   ; None         ; 12.196 ns  ; init:initializator|data[3]       ; data[3]        ; master_clk ;
+; N/A   ; None         ; 11.983 ns  ; write:wrt|data[4]                ; data[4]        ; master_clk ;
+; N/A   ; None         ; 11.661 ns  ; write:wrt|data[7]                ; data[7]        ; master_clk ;
+; N/A   ; None         ; 11.510 ns  ; init:initializator|data[4]       ; data[5]        ; master_clk ;
+; N/A   ; None         ; 11.318 ns  ; write:wrt|data[6]                ; data[6]        ; master_clk ;
+; N/A   ; None         ; 11.079 ns  ; init:initializator|counter_1[14] ; enable         ; master_clk ;
+; N/A   ; None         ; 10.876 ns  ; init:initializator|counter_1[14] ; enable_control ; master_clk ;
+; N/A   ; None         ; 8.543 ns   ; write:wrt|inner_delitel[14]      ; enable         ; master_clk ;
+; N/A   ; None         ; 8.340 ns   ; write:wrt|inner_delitel[14]      ; enable_control ; master_clk ;
++-------+--------------+------------+----------------------------------+----------------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jun 06 17:26:50 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off lcd_1602 -c test --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "master_clk" is an undefined clock
+Warning: Found 4 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "init:initializator|en" as buffer
+    Info: Detected gated clock "init:initializator|always0" as buffer
+    Info: Detected ripple clock "init:initializator|counter_1[14]" as buffer
+    Info: Detected ripple clock "write:wrt|inner_delitel[14]" as buffer
+Info: Clock "master_clk" has Internal fmax of 140.47 MHz between source register "init:initializator|ready" and destination register "write:wrt|inner_delitel[14]" (period= 7.119 ns)
+    Info: + Longest register to register delay is 2.487 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X7_Y8_N17; Fanout = 18; REG Node = 'init:initializator|ready'
+        Info: 2: + IC(1.827 ns) + CELL(0.660 ns) = 2.487 ns; Loc. = LCFF_X2_Y6_N29; Fanout = 3; REG Node = 'write:wrt|inner_delitel[14]'
+        Info: Total cell delay = 0.660 ns ( 26.54 % )
+        Info: Total interconnect delay = 1.827 ns ( 73.46 % )
+    Info: - Smallest clock skew is -4.368 ns
+        Info: + Shortest clock path from clock "master_clk" to destination register is 2.629 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 3; CLK Node = 'master_clk'
+            Info: 2: + IC(0.863 ns) + CELL(0.666 ns) = 2.629 ns; Loc. = LCFF_X2_Y6_N29; Fanout = 3; REG Node = 'write:wrt|inner_delitel[14]'
+            Info: Total cell delay = 1.766 ns ( 67.17 % )
+            Info: Total interconnect delay = 0.863 ns ( 32.83 % )
+        Info: - Longest clock path from clock "master_clk" to source register is 6.997 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 3; CLK Node = 'master_clk'
+            Info: 2: + IC(1.385 ns) + CELL(0.206 ns) = 2.691 ns; Loc. = LCCOMB_X7_Y6_N0; Fanout = 2; COMB Node = 'init:initializator|always0'
+            Info: 3: + IC(0.331 ns) + CELL(0.970 ns) = 3.992 ns; Loc. = LCFF_X7_Y6_N31; Fanout = 3; REG Node = 'init:initializator|counter_1[14]'
+            Info: 4: + IC(1.517 ns) + CELL(0.000 ns) = 5.509 ns; Loc. = CLKCTRL_G0; Fanout = 11; COMB Node = 'init:initializator|counter_1[14]~clkctrl'
+            Info: 5: + IC(0.822 ns) + CELL(0.666 ns) = 6.997 ns; Loc. = LCFF_X7_Y8_N17; Fanout = 18; REG Node = 'init:initializator|ready'
+            Info: Total cell delay = 2.942 ns ( 42.05 % )
+            Info: Total interconnect delay = 4.055 ns ( 57.95 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: tco from clock "master_clk" to destination pin "enable" through register "init:initializator|ready" is 14.694 ns
+    Info: + Longest clock path from clock "master_clk" to source register is 6.997 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 3; CLK Node = 'master_clk'
+        Info: 2: + IC(1.385 ns) + CELL(0.206 ns) = 2.691 ns; Loc. = LCCOMB_X7_Y6_N0; Fanout = 2; COMB Node = 'init:initializator|always0'
+        Info: 3: + IC(0.331 ns) + CELL(0.970 ns) = 3.992 ns; Loc. = LCFF_X7_Y6_N31; Fanout = 3; REG Node = 'init:initializator|counter_1[14]'
+        Info: 4: + IC(1.517 ns) + CELL(0.000 ns) = 5.509 ns; Loc. = CLKCTRL_G0; Fanout = 11; COMB Node = 'init:initializator|counter_1[14]~clkctrl'
+        Info: 5: + IC(0.822 ns) + CELL(0.666 ns) = 6.997 ns; Loc. = LCFF_X7_Y8_N17; Fanout = 18; REG Node = 'init:initializator|ready'
+        Info: Total cell delay = 2.942 ns ( 42.05 % )
+        Info: Total interconnect delay = 4.055 ns ( 57.95 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 7.393 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X7_Y8_N17; Fanout = 18; REG Node = 'init:initializator|ready'
+        Info: 2: + IC(1.846 ns) + CELL(0.589 ns) = 2.435 ns; Loc. = LCCOMB_X2_Y6_N30; Fanout = 2; COMB Node = 'enable_wire~0'
+        Info: 3: + IC(1.712 ns) + CELL(3.246 ns) = 7.393 ns; Loc. = PIN_47; Fanout = 0; PIN Node = 'enable'
+        Info: Total cell delay = 3.835 ns ( 51.87 % )
+        Info: Total interconnect delay = 3.558 ns ( 48.13 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 150 megabytes
+    Info: Processing ended: Thu Jun 06 17:26:50 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

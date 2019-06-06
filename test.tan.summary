@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.694 ns
+From           : init:initializator|ready
+To             : enable
+From Clock     : master_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'master_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 140.47 MHz ( period = 7.119 ns )
+From           : init:initializator|ready
+To             : write:wrt|inner_delitel[14]
+From Clock     : master_clk
+To Clock       : master_clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
